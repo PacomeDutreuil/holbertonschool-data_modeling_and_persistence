@@ -1,0 +1,7 @@
+SELECT DISTINCT i.name
+FROM instructors i
+INNER JOIN courses c
+    ON i.id = c.instructor_id
+INNER JOIN registrations r
+    ON c.id = r.course_id
+ORDER BY i.name;
